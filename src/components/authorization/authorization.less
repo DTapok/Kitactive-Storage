@@ -1,0 +1,47 @@
+@import "../../utils/colors.less";
+
+.authorization {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    padding-top: 0.8rem;
+    width: 60vw;
+    background-color: lighten(@background-color, 10%);
+}
+
+.authorization_form {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    gap: 1.5rem;
+
+    &__field {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+
+        &__text {
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+        }
+
+        &__input {
+            background-color: transparent;
+            font-size: 1.5rem;
+            outline: none;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 959px) {
+    .authorization_form__field {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+}
